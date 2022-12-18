@@ -11,4 +11,4 @@ jobs:
       - name: Install Modules
         run: npm i
       - name: Generate Documentation
-        run: npx documentation build *.js -f md --github --ext .js --o docs
+        run: npx documentation build *.js -f md --github --o docs
