@@ -1,0 +1,12 @@
+name: Generate Documentation
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v3
+      - name: Install Modules
+        run: npm i
+      - name: Generate Documentation
+        run: npx documentation . -f md --github --ext .js --o docs
