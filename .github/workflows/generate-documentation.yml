@@ -11,11 +11,11 @@ jobs:
       - name: Install Modules
         run: npm i
       - name: Generate Documentation
-        run: npx documentation build *.js -f md --github --o docs
+        run: npx documentation build *.js -f md --github --o docs.md
       - name: Push Updated Documentation
         run: |
           git config user.name "GitHub Actions"
           git config user.email "<>"
-          git add docs*
+          git add docs.md
           git commit -m "Updated Documentation"
           git push origin main
